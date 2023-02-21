@@ -16,12 +16,13 @@ body {
   /* width: 100%; */
   box-sizing: border-box;
   margin: 1em auto;
-  background-color: blue;
+  background-color: #ffffff;
 }
 
 .grid {
   display: grid;
   margin-left: 0.5px;
+  padding: 10px;
   /* grid-template-columns: 1fr 1fr 1fr 1fr; */
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 0.2em;
@@ -29,7 +30,7 @@ body {
 }
 
 h2 {
-  background-color: blue;
+  background-color: #6464df;
   color: #ffffff;
   text-align: center;
   padding: 50px;
