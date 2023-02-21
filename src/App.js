@@ -10,7 +10,7 @@ import MovieCard from "./components/MovieCard";
 // Api urls
 const API_URL = "https://api.themoviedb.org/3/movie/popular?api_key=4e9fca429e4ad82c14ea0eb808059545";
 
-// const API_SEARCH="https://api.themoviedb.org/3/search/movie?api_key=4e9fca429e4ad82c14ea0eb808059545&language=en-US&query";
+const API_SEARCH="https://api.themoviedb.org/3/search/movie?api_key=4e9fca429e4ad82c14ea0eb808059545&language=en-US&query";
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -30,7 +30,7 @@ function App() {
     e.preventDefault();
     console.log('searching...');
     try {
-      const url = `https://api.themoviedb.org/3/search/movie?api_key=4e9fca429e4ad82c14ea0eb808059545&language=en-US&query=${query}`;
+      const url = `${API_SEARCH}=${query}`;
       const response = await fetch(url);
       const data = await response.json();
       console.log(data);
@@ -70,13 +70,22 @@ function App() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <div className='container'>
-        <div className="grid">
-          { movies.map(movie => (
-              <MovieCard key={movie.id} {...movie} />    
-          )) }
-        </div>
+
+      <div>
+        { movies.length > 0 ? (
+          <div className='container'>
+            <div className="grid">
+              { movies.map(movie => (
+                  <MovieCard key={movie.id} {...movie} />    
+              )) }
+            </div>
+          </div>
+        ) : (
+          <h2 className='error-search'>Sorry!!! no movies for this search...</h2>
+        ) }
       </div>
+
+      
     </>
   );
 }
