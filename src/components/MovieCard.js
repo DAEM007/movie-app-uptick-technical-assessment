@@ -8,7 +8,7 @@ import { Modal, Button } from 'react-bootstrap';
 const API_IMG="https://image.tmdb.org/t/p/w500/";
 
 // movie card component
-const MovieCards = ({ title, poster_path, vote_average, release_date, overview }) => {
+const MovieCards = ({ poster_path, vote_average, release_date, overview }) => {
     // states
     const [show, setShow] = useState(false);
 
