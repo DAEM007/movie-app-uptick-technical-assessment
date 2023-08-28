@@ -76,7 +76,7 @@ function App() {
           <div className='container'>
             <div className="grid">
               { movies.map(movie => (
-                  <MovieCard key={movie.id} {...movie} />    
+                <MovieCard key={movie.id} {...movie} />    
               )) }
             </div>
           </div>
@@ -85,7 +85,6 @@ function App() {
         ) }
       </div>
 
-      
     </>
   );
 }
