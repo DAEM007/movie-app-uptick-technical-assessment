@@ -28,7 +28,7 @@ const MovieCards = ({
   const imageUrl = poster_path !== null ? API_IMG + poster_path : altMoviePic;
 
   return (
-    <div className="card text-center mb-3 bg-secondary">
+    <div className="col-12 col-md-6 col-lg-4 card text-center mb-3 bg-secondary">
       <div className="card-body">
         <img className="card-img-top" src={imageUrl} alt="movie-pic" />
         <div className="card-body">

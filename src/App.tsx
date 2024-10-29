@@ -92,7 +92,7 @@ function App() {
       <div>
         {movies.length > 0 ? (
           <div className="container">
-            <div className="grid">
+            <div className="row">
               {movies.map((movie: Movie) => (
                 <MovieCard key={movie.id} {...movie} />
               ))}
