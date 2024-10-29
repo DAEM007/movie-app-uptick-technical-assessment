@@ -11,8 +11,9 @@ import {
 } from "react-bootstrap";
 import MovieCard from "./components/MovieCard";
 
-const API_URL = process.env.REACT_APP_API_URL;
-const API_SEARCH = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&query`;
+const API_KEY = process.env.REACT_APP_API_KEY;
+const API_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`;
+const API_SEARCH = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query`;
 
 interface Movie {
   id: number;
