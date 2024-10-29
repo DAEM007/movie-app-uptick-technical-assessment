@@ -91,7 +91,7 @@ function App() {
       </Navbar>
 
       <div>
-        {movies.length > 0 ? (
+        {movies && movies.length > 0 ? (
           <div className="container">
             <div className="row">
               {movies.map((movie: Movie) => (
